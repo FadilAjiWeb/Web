@@ -79,6 +79,14 @@ img {
   margin-bottom: var(--mb-4);
   text-align: center;
 }
+
+.section-title2 {
+  position: relative;
+  margin-top: var(--mb-2);
+  margin-bottom: var(--mb-4);
+  text-align: center;
+}
+
 .section-title::after {
   position: absolute;
   content: "";
@@ -294,13 +302,13 @@ img {
   width: 95%;
 }
 .skills__css {
-  width: 85%;
+  width: 95%;
 }
 .skills__js {
-  width: 65%;
+  width: 95%;
 }
 .skills__ux {
-  width: 85%;
+  width: 95%;
 }
 .skills__img {
   border-radius: 0.5rem;
