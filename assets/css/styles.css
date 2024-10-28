@@ -266,6 +266,14 @@ img {
 .skills__subtitle {
   margin-bottom: var(--mb-2);
 }
+
+.skills__subtitle2 {
+  margin-bottom: var(--mb-2);
+  position: relative;
+  margin-top: var(--mb-2);
+  text-align: center;
+}
+
 .skills__text {
   margin-bottom: var(--mb-4);
 }
