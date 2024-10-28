@@ -82,7 +82,7 @@
 
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
-                <h2 class="section-title">Rate</h2>
+                <h2 class="section-title">Rate & CEO</h2>
 
                 <div class="skills__container bd-grid">          
                     <div>
@@ -148,29 +148,92 @@
             <!--===== WORK =====-->
             <section class="work section" id="work">
                 <h2 class="section-title">Picture</h2>
-
+            
                 <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/pict1.jpg" alt="">
+                    <a href="javascript:void(0)" class="work__img" onclick="showPopup('Bakso Polos Kecil', 'Rp 50.000', 'Bakso sapi polos dibuat dari daging sapi. Tanpa pengawet. Enak sedap.')">
+                        <img src="assets/img/pict1.jpg" alt="Bakso Polos Kecil">
                     </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/pict2.jpg" alt="">
+                    <a href="javascript:void(0)" class="work__img" onclick="showPopup('Bakso Kerucut', ' Rp180.000', 'Bakso bntuk kerucut diameter 20cm. Dgn isian bkso 50pc plus sambel dan cabe rawit.')">
+                        <img src="assets/img/pict2.jpg" alt="Bakso Kerucut">
                     </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/pict3.jpg" alt="">
+                    <a href="javascript:void(0)" class="work__img" onclick="showPopup('Bakso Tahu', 'Rp 20.000', 'Bakso tahu dibuat dari tahu kulit diisi adonan bkso. Gurih sedap')">
+                        <img src="assets/img/pict6.jpg" alt="Bakso Tahu">
                     </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/pict4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/pict5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/pict6.jpg" alt="">
+                    <a href="javascript:void(0)" class="work__img" onclick="showPopup('Bakso Mercon', 'Rp 50.000', 'Bakso urat yg diisi dgn sambel rawit .pedes mntyp.')">
+                        <img src="assets/img/pict4.jpg" alt="Bakso Cabe Mercon">
                     </a>
                 </div>
+            
+                <!-- Pop-up Container -->
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="closePopup()">&times;</span>
+                        <h2 id="popup-title">Detail Produk</h2>
+                        <p><strong>Nama Produk:</strong> <span id="popup-name"></span></p>
+                        <p><strong>Harga:</strong> <span id="popup-price"></span></p>
+                        <p><strong>Deskripsi:</strong> <span id="popup-description"></span></p>
+                    </div>
+                </div>
+            
+                <!-- CSS untuk Pop-up -->
+                <style>
+                    /* Gaya untuk Pop-up */
+                    .popup {
+                        display: none; /* Pop-up disembunyikan secara default */
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        z-index: 1000;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .popup-content {
+                        background-color: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        width: 80%;
+                        max-width: 400px;
+                        text-align: center;
+                        position: relative;
+                    }
+                    
+                    /* Tombol Tutup (X) */
+                    .close {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        font-size: 24px;
+                        cursor: pointer;
+                    }
+                </style>
+            
+                <!-- JavaScript untuk Menampilkan dan Menutup Pop-up -->
+                <script>
+                    function showPopup(name, price, description) {
+                        document.getElementById("popup").style.display = "flex";
+                        document.getElementById("popup-name").textContent = name;
+                        document.getElementById("popup-price").textContent = price;
+                        document.getElementById("popup-description").textContent = description;
+                    }
+            
+                    function closePopup() {
+                        document.getElementById("popup").style.display = "none";
+                    }
+            
+                    // Tutup popup ketika area luar konten diklik
+                    window.onclick = function(event) {
+                        let popup = document.getElementById("popup");
+                        if (event.target === popup) {
+                            popup.style.display = "none";
+                        }
+                    }
+                </script>
             </section>
-
+            
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
